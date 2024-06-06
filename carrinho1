@@ -1,0 +1,510 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Checkout | E-Shopper</title>
+	
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}">
+	<link rel="stylesheet" href="{% static 'css/price-range.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +55 21 972816144</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> darfsant@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo2.jpeg" width="70px" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							<div class="btn-group">
+
+								
+							</div>
+							
+							<div class="btn-group">
+								
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-lock"></i>{{ nome }}</a></li>
+								<li><a href="{% url 'botContato' %}"><i class="fa fa-star"></i> Sobre nós</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
+								<li><a href="{% url 'login2' %}"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="{% url 'fcliente' %}">Home</a></li>
+								<li class="dropdown"><a href="#">Instrumentos de corda<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="shop.html">Violões</a></li>
+										<li><a href="product-details.html">Guitarras</a></li> 
+										<li><a href="checkout.html">Baixos</a></li> 
+										<li><a href="cart.html">Ukuleles</a></li> 
+										<li><a href="login.html">Login</a></li> 
+                                    </ul>
+                                </li> 
+								<li class="dropdown"><a href="#">Instrumentos de percussão<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="shop.html">Baterias</a></li>
+										<li><a href="product-details.html">Pandeiros</a></li> 
+										<li><a href="checkout.html">Cajons</a></li> 
+										<li><a href="cart.html">Tatãs</a></li> 
+										<li><a href="login.html">Login</a></li> 
+                                    </ul>
+                                </li>
+								<li class="dropdown"><a href="#">Instrumentos de sopro<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="shop.html">Flautas transversas</a></li>
+										<li><a href="product-details.html">Clarinetas</a></li> 
+										<li><a href="checkout.html">Saxofones</a></li> 
+										<li><a href="cart.html">Trompetes</a></li> 
+										<li><a href="login.html">Login</a></li> 
+                                    </ul>
+                                </li>
+								<li class="dropdown"><a href="#">Acessórios<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="blog.html">Captadores</a></li>
+										<li><a href="blog-single.html">Correias</a></li>
+										<li><a href="blog-single.html">Capas</a></li>
+										<li><a href="blog-single.html">Paletas</a></li>
+                                    </ul>
+                                </li> 
+							
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<form class="example" action="action_page.php">
+								<input type="text" placeholder="Buscar" name="buscar">
+								<button type="submit"><i class="fa fa-search"></i></button>
+							  </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+
+	<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Carrinho</li>
+				</ol>
+			</div>
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed">
+					<thead>
+						<tr class="cart_menu">
+							<td class="image">Itens</td>
+							<td class="description"></td>
+							<td class="price">Preço</td>
+							<td class="quantity">Quantidade</td>
+							<td class="total">Total</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="cart_product">
+								<a href=""><img src="images/cart/one.png" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href="">Colorblock Scuba</a></h4>
+								<p>Web ID: 1089772</p>
+							</td>
+							<td class="cart_price">
+								<p>$59</p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									
+									<input class="cart_quantity_input" type="number" name="quantity" value="1" autocomplete="off" size = "2" >
+									
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price">$59</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="cart_product">
+								<a href=""><img src="images/cart/two.png" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href="">Colorblock Scuba</a></h4>
+								<p>Web ID: 1089772</p>
+							</td>
+							<td class="cart_price">
+								<p>$59</p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									
+									<input class="cart_quantity_input" type="number" name="quantity" value="1" autocomplete="off" size="2">
+									
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price">$59</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td class="cart_product">
+								<a href=""><img src="images/cart/three.png" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href="">Colorblock Scuba</a></h4>
+								<p>Web ID: 1089772</p>
+							</td>
+							<td class="cart_price">
+								<p>$59</p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+								
+									<input class="cart_quantity_input" type="number" name="quantity" value="1" autocomplete="off" size="2">
+									
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price">$59</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section> <!--/#cart_items-->
+
+	<section id="do_action">
+		<div class="container">
+			<div class="heading">
+				<h3>Prossiga para concluir a compra</h3>
+				<p>Escolha entre usar cupom de desconto, resgatar pontos ou cadrastrar endereço de entrega.</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="chose_area">
+						<ul class="user_option">
+							<li>
+								<input type="checkbox">
+								<label>Usar cupom de desconto</label>
+							</li>
+							<li>
+								<input type="checkbox">
+								<label>Usar voucher</label>
+							</li>
+							<li>
+								<input type="checkbox">
+								<label>Calcular entrega + taxas</label>
+							</li>
+						</ul>
+						<ul class="user_info">
+							<li class="single_field">
+								<label>País:</label>
+								<select>
+									<option>Brasil</option>
+									<option>Argentina</option>
+								</select>
+								
+							</li>
+							<li class="single_field">
+								<label>Region / State:</label>
+								<select>
+									<option>Rio de Janeiro</option>
+									<option>São Paulo</option>
+									<option>Bahia</option>
+									<option>Maranhão</option>
+									<option>Buenos Aires</option>
+									<option>Tucumán</option>
+									<option>Santa Fé</option>
+									<option>Mendonza</option>
+								</select>
+							
+							</li>
+							<li class="single_field zip-field">
+								<label>Zip Code:</label>
+								<input type="text">
+							</li>
+						</ul>
+						<a class="btn btn-default update" href="">Conferir taxas</a>
+						<a class="btn btn-default check_out" href="">Continuar</a>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="total_area">
+						<ul>
+							<li>Total do carrinho <span></span></li>
+							<li>Taxas <span></span></li>
+							<li>Entrega <span>Free</span></li>
+							<li>Total <span></span></li>
+						</ul>
+							<a class="btn btn-default update" href="">Finalizar</a>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!--/#do_action-->
+
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>D</span>arfsant</h2>
+							<p>Acompanhe nosso videos no YouTube. Compartilhando o amor pela arte musical.</p>
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/lojafisica.jpg" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Loja física</p>
+								<h2>24 MAR 2024</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/lojistas.jpeg" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Nossos profissionais</p>
+								<h2>01 ABR 2024</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/instrumentos2.jpg" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Nossos intrumentos</p>
+								<h2>14 ABR 2024</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/dacasa.webp" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Queridinhos da casa</p>
+								<h2>21 ABR 2024</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="address">
+							<img src="images/home/map.png" alt="" />
+							<p>Avenida Sete de Setembro, 3551  -  Curitiba, PR</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Serviços</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Ajuda</a></li>
+								<li><a href="{% url 'botContato' %}">Fale conosco</a></li>
+								<li><a href="#">Status do pedido</a></li>
+								<li><a href="#">Localização</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Compra rapida</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Baterias</a></li>
+								<li><a href="#">Violões</a></li>
+								<li><a href="#">Saxofones</a></li>
+								<li><a href="#">Paletas</a></li>
+								<li><a href="#">Shop</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Políticas</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Termos de uso</a></li>
+								<li><a href="#">Políticas de privacidade</a></li>
+								<li><a href="#">Política de reembolso</a></li>
+								<li><a href="#">Sistema de pedidos</a></li>
+								<li><a href="#">Gerenciamento</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Sobre nós</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Informações da marca</a></li>
+								<li><a href="#">Carreira</a></li>
+								<li><a href="#">Localização dos afiliados</a></li>
+								<li><a href="#">Programa de afiliados</a></li>
+								<li><a href="#">Copyright</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Fique por dentro!</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Digite seu email" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Fique por dentro de todas as novidades <br /> disponíveis em nosso site.</p>
+							</form>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2024 DARFSANT Inc. TODOS OS DIREITOS RESERVADOS.</p>
+					<p class="pull-right">Desenvolvido por <span><a target="_blank" href="#">Darfsant developers group</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+
+
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+	<script src="{% static 'js/price.range.js' %}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+	
+	
+	
+    </script>
+
+
+</body>
+</html>
